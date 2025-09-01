@@ -11,15 +11,15 @@ While many of the decisions have the goal of privacy in mind, this is a highly o
 - Reduce reliance on third party services.
 - The cloud is just someone else's computer. When used carefully, it's incredibly convenient, just don't always default to it.
 - Maintain separation of concerns between services. Avoid using many products from one service (especially proprietary ones).
-- Abide by the principle of least privilege
+- Abide by the principle of least privilege.
 
 ## Quick thoughts
 - End to end encryption is all or nothing. The moment you introduce a backdoor for good actors, bad actors now have an in.
 - A decentralised protocol/technology doesn't necessarily mean it's decentralised in power (ie some entity could have ownership of a large amount of nodes).
-- Shift from ownership to leasing. We're constantly truly owning less and less of items purchased and instead have licences and agreements to lease or access it.
+- Shift from ownership to leasing. We're constantly owning less and less of the items we purchase and instead have licences and agreements to lease or access it. Try opt for fully accessing and owning the product being sold where possible.
 
 ## Opinions
-- SaaS fatigue is real - we're at the beginning of a shift back to on-premise deployments, perpetual licenses and reducing subscriptions.
+- SaaS fatigue is real - we're at the beginning of a shift back to on-prem deployments, perpetual licenses and reducing subscriptions.
 
 ---
 
@@ -40,9 +40,9 @@ While many of the decisions have the goal of privacy in mind, this is a highly o
 	- Utilise browser isolation
 		- Use Firefox containers on desktop devices
 		- On mobile, download different browsers and containerise apps that way (or with different profiles in GrapheneOS)
-- Avoid using SSO
-- Give the least amount of app permission privileges as possible
-- Backup all data regularly (try automate it as much as possible, as it's often the first thing that goes otherwise)
+- Avoid authenticating into services with SSO
+- Give the least amount of app permission as possible
+- Backup all data regularly (try automate it as much as possible, as it's often the first thing that isn't done otherwise)
 - 321 Backup rule
 	- 3 copies of your data
 	- 2 copies in different media formats
@@ -60,7 +60,7 @@ Notable highlights:
 - App network permission
 
 Somethings which can get annoying (and that are generally hard for GrapheneOS to fix): 
-- Lack of Google Pay support
+- Lack of tap-to-pay support with Google Pay
 - Some apps may not be supported if they use the Google play integrity API
 
 Would be nice:
@@ -87,10 +87,10 @@ Would be nice:
 ---
 
 ## File Management
-For key aspects of your digital life such as files, contacts and calendar, backing them up to the cloud is generally a idea (in addition to your own on-site backup) to fulfill the 3-2-1 backup rule. While the cloud is just someone else's computer and therefore hard to fully trust, encrypting your files client side before backing up significantly reduces the trust factor you would have otherwise had to have with the cloud provider.
+For key aspects of your digital life such as files, contacts and calendar, backing them up to the cloud is generally a good idea (in addition to your own on-site backup) to fulfill the 3-2-1 backup rule. While the cloud is just someone else's computer and therefore hard to fully trust, encrypting your files client side before backing up significantly reduces the trust factor you would have otherwise had to have with the cloud provider.
 
 There are 2 main options:
-1. Use Cryptomator if you don't want to use Borg and want to do full syncs to the cloud (without an encryption layer in your backup solution). You can then backup the files using CyberDuck to your file server (e.g. using SFTP). You can use a cloud provider such as rsync.net, Backblaze or even S3.,
+1. Use Cryptomator if you don't want to use Borg and want to do full syncs to the cloud (without an encryption layer in your backup solution). You can then backup the files using CyberDuck to your file server (e.g. using SFTP). You can use a cloud provider such as rsync.net, Backblaze or even S3.
 2. Otherwise, Borg and backing it up using Borgmatic (script) or Vorta (desktop GUI) is a good option.
 	- You can use a third-party Borg server to backup your encrypted data to, such as:
 		- Rsync.net (their own infra)
@@ -113,18 +113,18 @@ Managing files between devices
 ### Obsidian
 - Useful tool for writing and managing local notes
 - You can use NextCloud to handle the syncing and just use Obsidian as the app to open the notes in
-- To sync Android with Obsidian you can use Syncthing to copy the files straight down to your phone. They also offer a proprietary sync service.
+- To sync Android with Obsidian you can use Syncthing to copy the files straight down to your phone. Obsidian also offers a proprietary sync service.
 - Standard notes is also another alternative
 
 ### VPNs
 - Mullvad VPN
 	- Pretty much the standard for a private VPN
 	- Accepts Monero, cash and gift cards as payment
-- iVPN
+- IVPN
 	- Accepts Monero and cash
 	- Similar to Mullvad but less credible and often a second choice 
 - Proton VPN
-	- Avoid using if you use Proton for other services (to keep separation of concerns), however, for watching content and using more main stream services (such as Youtube or Reddit), it's generally the only VPN out of this list that doesn't have their IPs blocked.
+	- Avoid using it if you use Proton for other services (to keep separation of concerns), however, for watching content and using more main stream services (such as Youtube or Reddit), it's generally the only VPN out of this list that doesn't have their IPs blocked.
 - Tailscale (Or self host Headscale)
 	- Can't be used with Mullvad VPN desktop app. Need to use WireGuard desktop app and download WireGuard config from Mullvad VPN to have Tailscale work with Mullvad.
 	- Ideally don't install Tailscale on phone (since you'd then have to pay for Tailscale's Mullvad Exit Node add-on and have everything route through Tailscale)
@@ -136,7 +136,7 @@ Managing files between devices
 ### iMessages
 - You may want to handle iMessages even when you have an Android in certain cases.
 - In this case, BlueBubbles offers the ability to relay messages through to your Android phone over your own ngrok, Cloudflare or similar tunnel.
-	- You'll need a Mac computer that remains on so generally a Mac Mini is preferred. 
+	- You'll need a Mac computer that remains on (Mac Mini recommended)
 	- You then setup the BlueBubbles app on the Mac and add the client to your phone
 
 ### Forwarding messages
@@ -156,7 +156,7 @@ Using an iPhone, you can forward all text messages it receives to a central stor
 
 ### Email
 - Sending messages with PGP encryption works but know that it only takes one side to break it and then it's over completely. Opt for using encrypted messengers like Signal if possible.
-	- Network effect is very real with communication channels and Signal seems to be the closest mainstream option right now. It does require your phone number, so an alternative would be Session but that seems to be less established / hard onboarding experience. Going with the mind set that most people don't use tech for technology's sake, Signal is probably a better bet here that sparks a nice middle ground.
+	- Network effect is very real with communication channels and Signal seems to be the closest mainstream option right now. It does require your phone number, so an alternative would be Session but that seems to be less established / harder onboarding experience. Going with the mind set that most people don't use tech for technology's sake, Signal is probably a better bet here that sparks a nice middle ground.
 
 #### Email providers
 Email is inherently not private, so take the end-to-end encryption feature with a grain of salt (since it only works within the same provider).
@@ -182,8 +182,8 @@ Email is inherently not private, so take the end-to-end encryption feature with 
 ### Password managers
 - 1Password is the gold standard but it's proprietary
 - Ideal option is KeePassXC or self hosted BitWarden
-- Should use password manager built in SSH agent so you're not storing private keys in plain text on your file system
-	- If you have many SSH keys, you may reach max retries for public key attempts. In that case, for 1Password, include the public key in your `./ssh` directory and link to the file in your `config` as the `IdentityFile` property value (instead of it normally referencing the private key file) to guide the SSH agent on which primary key to pull.
+- You should use your password manager's built in SSH agent so you're not storing private keys in plain text on your file system
+	- If you have many SSH keys, you may reach max retries for public key attempts. In that case, for 1Password, include the public key in your `./ssh` directory and link to the file in your `config` as the `IdentityFile` property value (instead of it normally referencing the private key file) to guide the SSH agent on which primary key to pull (1Password auto maps it to the private key).
 
 ### 2FA
 - Yubikeys are good for hardware 2FA
@@ -202,6 +202,7 @@ Some notable VPS providers are as follows: Hetzner, OVH, Digital Ocean, Linode, 
 - Install Tailscale and add firewall in cloud provider for Tailscale only + HTTP/S traffic depending on server
 - Setup Borgmatic on server to Borg server (rsync.net, BorgBase etc)
 	- To monitor backups, setup Uptime Kuma on a server and include notifications to Uptime Kuma within the Borgmatic yaml file
+	- Make sure to include the path to your docker volumes in the config
 - Other useful tools to setup:
 	- Fail2ban
 	- ufw (if you want to implement the firewall on the server and not inside VPS provider)
@@ -223,7 +224,7 @@ Some notable VPS providers are as follows: Hetzner, OVH, Digital Ocean, Linode, 
 ### Neovim
 - Neovim kickstart works great if you're ok using vim and losing some features of a full code editor like VSCode (or it's forks). Generally, the best option is to pair it with a terminal multiplexer like tmux since you can dip in and out and be in the same place as you were previously.
 - VSCode is the gold standard these days. Ideally you can use VSCodium (open source version without Microsoft telemetry etc), but it doesn't support remote SSH connections within
-- Other option is Zed which is ok
+- Other option is Zed which is ok and looking more promising every day
 
 ### Terminal packages
 - Setup `tmux-resurrect` to restore tmux sessions after a server restart
