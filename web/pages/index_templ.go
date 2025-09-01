@@ -8,7 +8,7 @@ package pages
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "techwithprivacy/components"
+import "techwithprivacy/web/components"
 
 func Index(content string) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
@@ -35,7 +35,7 @@ func Index(content string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"container-sm py-5\"><div class=\"row\"><div class=\"col-3 d-none d-md-block\"><div class=\"position-sticky top-0\" style=\"z-index: 100;\"><p class=\"pt-4 fw-semibold\">Table of contents</p><nav id=\"navbar-example3\" class=\"h-100 flex-column align-items-stretch pe-4 border-end sticky top-0\"><nav class=\"nav nav-pills flex-column\"><a class=\"nav-link\" href=\"#introduction\">Introduction</a> <a class=\"nav-link\" href=\"#fundamentals\">Fundamentals</a> <a class=\"nav-link\" href=\"#operating-systems\">Operating Systems</a> <a class=\"nav-link\" href=\"#file-management\">File Management</a> <a class=\"nav-link\" href=\"#communication\">Communication</a> <a class=\"nav-link\" href=\"#secret-management\">Secret Management</a> <a class=\"nav-link\" href=\"#servers\">Servers</a> <a class=\"nav-link\" href=\"#development\">Development</a> <a class=\"nav-link\" href=\"#cryptocurrency\">Cryptocurrency</a> <a class=\"nav-link\" href=\"#useful-resources\">Useful Resources</a> <a class=\"nav-link\" href=\"#future-considerations\">Future considerations</a></nav></nav></div></div><div class=\"col-12 col-md-9\"><div data-bs-spy=\"scroll\" data-bs-target=\"#navbar-example3\" data-bs-smooth-scroll=\"true\" class=\"scrollspy-example-2\" tabindex=\"0\">")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"container-sm py-md-5 py-4 px-4 px-md-0\"><div class=\"row\"><div class=\"col-3 d-none d-md-block\"><div class=\"position-sticky top-0\" style=\"z-index: 100;\"><p class=\"pt-4 fw-semibold\">Table of contents</p><nav id=\"navbar-example3\" class=\"h-100 flex-column align-items-stretch pe-4 border-end sticky top-0\"><nav class=\"nav nav-pills flex-column\"><a class=\"nav-link\" href=\"#introduction\">Introduction</a> <a class=\"nav-link\" href=\"#fundamentals\">Fundamentals</a> <a class=\"nav-link\" href=\"#operating-systems\">Operating Systems</a> <a class=\"nav-link\" href=\"#file-management\">File Management</a> <a class=\"nav-link\" href=\"#communication\">Communication</a> <a class=\"nav-link\" href=\"#secret-management\">Secret Management</a> <a class=\"nav-link\" href=\"#servers\">Servers</a> <a class=\"nav-link\" href=\"#development\">Development</a> <a class=\"nav-link\" href=\"#cryptocurrency\">Cryptocurrency</a> <a class=\"nav-link\" href=\"#useful-resources\">Useful Resources</a> <a class=\"nav-link\" href=\"#future-considerations\">Future considerations</a></nav></nav></div></div><div class=\"col-12 col-md-9\"><div data-bs-spy=\"scroll\" data-bs-target=\"#navbar-example3\" data-bs-smooth-scroll=\"true\" class=\"scrollspy-example-2\" tabindex=\"0\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

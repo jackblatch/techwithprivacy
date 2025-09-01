@@ -1,28 +1,24 @@
 package main
 
 import (
-	"fmt"
-	"os"
-	"techwithprivacy/components"
-	"techwithprivacy/markdown"
-	"techwithprivacy/pages"
-
 	"github.com/gin-gonic/gin"
+	"log"
+	"techwithprivacy/web/routes"
 )
 
 func setupRouter() *gin.Engine {
 	r := gin.Default()
 
 	r.GET("/", func(c *gin.Context) {
-		markdownContent, err := os.ReadFile("content.md")
+
+		page, err := routes.GetIndex()
+
 		if err != nil {
-			fmt.Println("Error reading file:", err)
+			log.Fatalf("failed to get index page: %v", err)
+			c.String(500, "Error fetching page")
 			return
 		}
 
-		html := markdown.ToHTML(markdownContent)
-		component := pages.Index(string(html))
-		page := components.RootLayout("Tech with Privacy", component)
 		c.Status(200)
 		c.Header("Content-Type", "text/html; charset=utf-8")
 
@@ -36,8 +32,10 @@ func setupRouter() *gin.Engine {
 }
 
 func main() {
+
 	r := setupRouter()
 	if err := r.Run(":3000"); err != nil {
 		panic(err)
 	}
+
 }
