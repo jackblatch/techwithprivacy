@@ -1,6 +1,7 @@
 # Tech with Privacy 💻 🕵️
-[https://www.techwithprivacy.com](https://www.techwithprivacy.com)
 ## Maintaining privacy in the modern world
+[https://www.techwithprivacy.com](https://www.techwithprivacy.com)
+
 A collection of casual and unfiltered notes on how to achieve increased privacy online.
 
 Many of the notes below have varying levels of complexity, compromises and efficiency. Given the ever evolving nature of technology, it's difficult to guarantee that anything is foolproof or failsafe, however, the aim is set some strong principles and foundations to then build on as the world evolves. As with everything, there are tradeoffs and in this case it's often convenience. 
