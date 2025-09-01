@@ -1,4 +1,5 @@
 # Tech with Privacy 💻 🕵️
+[https://www.techwithprivacy.com](https://www.techwithprivacy.com)
 ## Maintaining privacy in the modern world
 A collection of casual and unfiltered notes on how to achieve increased privacy online.
 
@@ -6,7 +7,7 @@ Many of the notes below have varying levels of complexity, compromises and effic
 
 While many of the decisions have the goal of privacy in mind, this is a highly opinionated list of notes and it's encouraged to personalise and adjust it to your specific use-cases and setup.
 
-View the full guide [here](https://techwithprivacy.com) or within GitHub [here](https://github.com/jackblatch/techwithprivacy/blob/main/content.md)
+View the full guide [here](https://techwithprivacy.com)
 
 ## Contributing
 The content in this repo is for informational purposes only and things change (regularly!) so please do your own research and check what’s best for you. If you notice any inaccuracies, please create an issue on GitHub. Contributions are always welcome!
