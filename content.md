@@ -178,6 +178,12 @@ Email is inherently not private, so take the end-to-end encryption feature with 
 
 ---
 
+## Domains
+- Choose a domain registrar that offers at cost or close to cost domains such as Cloudflare, Namecheap or Porkbun.
+- Always favour a gTLD domain name (3+ characters) over a ccTLD domain name to reduce risk since it's not tied to a specific country.
+
+---
+
 ## Secret Management
 ### Password managers
 - 1Password is the gold standard but it's proprietary
